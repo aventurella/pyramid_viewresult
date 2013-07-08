@@ -12,7 +12,7 @@ by Microsoft's MCV Framework.
 
 For example, controller methods take keyword arguments from the matchdict.
 
-.. code-block:: python
+.. code:: python
    from pyramid.view import view_config
    from pyramid_viewresult import Controller
 
@@ -26,7 +26,7 @@ For example, controller methods take keyword arguments from the matchdict.
 The corresponding route to call **action** above would be
 registered as follows:
 
-.. code-block:: python
+.. code:: python
     config.add_route('my_route', '/zap/{arg1}/{arg2}')
 
 The **arg1** and **arg2** matched params would be passed as arguments into
@@ -37,7 +37,7 @@ It is preferred that controllers are suffixed with 'Controller'.
 Additionally, a renderer is not required to be defined, one must be
 explicitely returned. Note in the **action** method above, we
 
-.. code-block:: python
+.. code:: python
     return self.view()
 
 The **view()** method can take 2 arguments, both optional. The first argument
@@ -47,7 +47,7 @@ specified, the follow rules are applied to find the template for that action.
 Using the template base dir, the following paths would be searched for a
 matching templates:
 
-.. code-block:: none
+.. code:: none
     <template_base>/foo/action.html
     <template_base>/action.html
 
@@ -60,13 +60,13 @@ The default view extension is initially set to 'html', however this can be
 configured. To configure this extension, in your Pyramid config apply the
 following:
 
-.. code-block:: python
+.. code:: python
     config.set_viewresult_view_extension('<your ext>')
 
 
 If a template name is desired to be secified, you have a few options.
 
-.. code-block:: python
+.. code:: python
     return self.view({}, 'name')
     return self.view({}, 'name.ext')
     return self.view({}, '~/path/name.ext')
@@ -75,7 +75,7 @@ If a template name is desired to be secified, you have a few options.
 
 If the view name contains:
 
-.. code-block:: python
+.. code:: python
     :
     /
     .
@@ -85,7 +85,7 @@ It is assumed you are specifying the full path to the template. If only the
 **name** is provided, that name will be used in place of the method name and
 the default lookup paths will be applied. For example:
 
-.. code-block:: python
+.. code:: python
    from pyramid.view import view_config
    from pyramid_viewresult import Controller
 
@@ -98,7 +98,7 @@ the default lookup paths will be applied. For example:
 
 This will search the following locations:
 
-.. code-block:: none
+.. code:: none
     <template_base>/foo/my_view.html
     <template_base>/my_view.html
 
@@ -106,7 +106,7 @@ This will search the following locations:
 The `pyramid_viewresult.Controller` additionally offers the following
 convenience methods and attrbutes:
 
-.. code-block:: python
+.. code:: python
     c = Controller()
     c.request  # the Pyramid request
     c.redirect_to_route  # redirect to a named route
