@@ -1,8 +1,8 @@
 ViewResult Controller + View System for Pyramid
 ==============================================================
 
-A Controller and View system for the `Pyramid
-<http://docs.pylonshq.com/>`_ web framework.
+A Controller and View system for the
+`Pyramid <http://docs.pylonshq.com/>`_ web framework.
 
 This addon requires the `pyramid_jinja2
 <http://docs.pylonsproject.org/projects/pyramid_jinja2/en/latest/`_ addon.
@@ -13,14 +13,14 @@ by Microsoft's MCV Framework.
 For example, controller methods take keyword arguments from the matchdict.
 
 .. code-block:: python
-    from pyramid.view import view_config
-    from pyramid_viewresult import Controller
+   from pyramid.view import view_config
+   from pyramid_viewresult import Controller
 
-    class FooController(Controller):
+   class FooController(Controller):
 
-        @view_config(route_name='my_route')
-        def action(self, arg1, arg2):
-            return self.view()
+       @view_config(route_name='my_route')
+       def action(self, arg1, arg2):
+           return self.view()
 
 
 The corresponding route to call **action** above would be
@@ -86,10 +86,10 @@ It is assumed you are specifying the full path to the template. If only the
 the default lookup paths will be applied. For example:
 
 .. code-block:: python
-    from pyramid.view import view_config
-    from pyramid_viewresult import Controller
+   from pyramid.view import view_config
+   from pyramid_viewresult import Controller
 
-    class FooController(Controller):
+   class FooController(Controller):
 
         @view_config(route_name='my_route')
         def action(self, arg1, arg2):
