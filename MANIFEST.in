@@ -1,0 +1,2 @@
+graft pyramid_viewresult
+include *.txt *.ini *.rst
