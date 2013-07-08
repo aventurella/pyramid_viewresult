@@ -13,14 +13,14 @@ by Microsoft's MCV Framework.
 For example, controller methods take keyword arguments from the matchdict.
 
 .. code:: python
-   from pyramid.view import view_config
-   from pyramid_viewresult import Controller
+    from pyramid.view import view_config
+    from pyramid_viewresult import Controller
 
-   class FooController(Controller):
+    class FooController(Controller):
 
-       @view_config(route_name='my_route')
-       def action(self, arg1, arg2):
-           return self.view()
+        @view_config(route_name='my_route')
+        def action(self, arg1, arg2):
+            return self.view()
 
 
 The corresponding route to call **action** above would be
