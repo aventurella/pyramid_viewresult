@@ -40,6 +40,6 @@ class ViewResultJinjaRenderer(Jinja2TemplateRenderer):
             __call__(model, system)
 
 
-def jinja_render_fatcory(info):
+def jinja_render_factory(info):
     environment = _get_or_build_default_environment(info.registry)
     return ViewResultJinjaRenderer(info, environment)
