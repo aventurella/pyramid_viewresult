@@ -1,5 +1,5 @@
 from .controllers import Controller
-from .renderers import jinja_render_fatcory
+from .renderers import jinja_render_factory
 
 
 def set_viewresult_view_extension(config, value):
@@ -20,6 +20,6 @@ def includeme(config):
       default is 'html'
 
     """
-    config.add_renderer(None, jinja_render_fatcory)
+    config.add_renderer(None, jinja_render_factory)
     config.add_directive('set_viewresult_view_extension', set_viewresult_view_extension)
     config.set_viewresult_view_extension('html')
